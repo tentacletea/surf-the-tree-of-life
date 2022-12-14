@@ -1,9 +1,16 @@
 import React from "react";
+import Species from "./Species"
 
 const listRender = (list) => {
+	const showDetails = () => {
+		console.log("details");
+	}
+
 	return list ? (
 		list.map((item, index) => {
-			return <li key={index}>{item.name}</li>;
+			return (
+				<Species key={index} species={item}></Species>
+			)
 		})
 	) : (
 		<p> loading</p>
